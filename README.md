@@ -1,0 +1,2 @@
+# stumpwm-config
+Stumpwm configuration
