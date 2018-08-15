@@ -1,6 +1,4 @@
-;;; -*- Mode: Lisp -*-
-
-;; .stumpwmrc - StumpWM configuration file
+;;; init.lisp --- Stumpwm Configuration
 
 ;; Copyright © 2018 James McCabe <james.mccab3@gmail.com>
 
@@ -78,4 +76,4 @@
 
 (define-key *top-map* (kbd "s-g") "toggle-gaps")
 
-;;; .stumpwmrc ends here
+;;; init.lisp ends here
