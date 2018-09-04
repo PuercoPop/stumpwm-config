@@ -25,55 +25,18 @@
 
 (in-package :stumpwm)
 
-(set-module-dir "~/.stumpwm.d/stumpwm-contrib/")
-
 ;; load modules
 (mapcar #'load-module '("ttf-fonts"
                         "swm-gaps"))
-;; set prefix key
-(set-prefix-key (kbd "C-z"))
 
-;; set font
-(set-font (make-instance 'xft:font :family "FreeSans" :subfamily "Regular" :size 10))
+(defun load-conf-files (file-names)
+  "Function to load a list of lisp files"
+  (load (merge-pathnames (concat file-names ".lisp") *load-truename*)))
 
-;; modeline settings
-(setf *mode-line-timeout* 10) 
-(setf *mode-line-border-width* 0) 
-(setf *mode-line-background-color* "#333333")
-(setf *mode-line-foreground-color* "#ebdbb2")
 
-;; setup modeline
-(setf *screen-mode-line-format*
-      (list "[^B%n^b] %W^>"
-            "^B^2//^n "
-            "%d"))
-
-;; turn on the mode line
-(if (not (head-mode-line (current-head)))
-    (toggle-mode-line (current-screen) (current-head)))
-
-;; windows settings
-(setf *ignore-wm-inc-hints* t)
-(setf *window-border-style* :thin)
-
-;; messages settings time
-(setf *timeout-wait* 7)
-(setf *message-window-gravity* :center)
-
-;; input box settings
-(setf *input-window-gravity* :center)
-
-;; input focus is transferred to the window you click on
-(setf *mouse-focus-policy* :click)
-
-;;; toggle gaps
-;; Inner gaps run along all the 4 borders of a frame
-(setf swm-gaps:*inner-gaps-size* 10)
-
-;; Outer gaps add more padding to the outermost borders
-;; (touching the screen border)
-(setf swm-gaps:*outer-gaps-size* 20)
-
-(define-key *top-map* (kbd "s-g") "toggle-gaps")
+;; load the rest of the config files
+(mapcar #'load-conf-files '("modeline"
+                            "keys"
+                            "general-settings"))
 
 ;;; init.lisp ends here
