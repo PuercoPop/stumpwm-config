@@ -26,8 +26,8 @@
 (in-package :stumpwm)
 
 ;; load modules
-(mapcar #'load-module '("ttf-fonts"
-                        "swm-gaps"))
+(mapc #'load-module '("ttf-fonts"
+                      "swm-gaps"))
 
 (defun load-conf-files (file-names)
   "Function to load a list of lisp files"
@@ -35,8 +35,8 @@
 
 
 ;; load the rest of the config files
-(mapcar #'load-conf-files '("modeline"
-                            "keys"
-                            "general-settings"))
+(mapc #'load-conf-files '("modeline"
+                          "keys"
+                          "general-settings"))
 
 ;;; init.lisp ends here
