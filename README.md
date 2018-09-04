@@ -5,8 +5,7 @@ My Stump Window Manager configuration files.
 
 ```shell
 git clone https://github.com/jamesmccabe/stumpwm-config ~/.stumpwm.d
-cd .stumpwm.d
-git clone https://github.com/stumpwm/stumpwm-contrib
+git clone https://github.com/stumpwm/stumpwm-contrib ~/.stumpwm.d/modules
 ```
 
 ### License
