@@ -18,14 +18,14 @@
 ;;; Commentary:
 
 ;; This file is my personal StumpWM configuration.
-;; It works with StumpWM 1.0.0, sbcl 1.3.1 debian on Ubuntu 16.04 LTS.
-;; See manual at: https://stumpwm.github.io/1.0.0/stumpwm-1.0.0.pdf
+;; It works with StumpWM 18.05, sbcl 1.4.5.debian on Ubuntu 18.04 LTS.
+;; See manual at: https://stumpwm.github.io/git/stumpwm-git.pdf
 
 ;;; Code:
 
 (in-package :stumpwm)
 
-(set-module-dir "/home/jmccabe/stumpwm-contrib/")
+(set-module-dir "~/.stumpwm.d/stumpwm-contrib/")
 
 ;; load modules
 (mapcar #'load-module '("ttf-fonts"
