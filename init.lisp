@@ -35,8 +35,8 @@
 
 
 ;; load the rest of the config files
-(mapc #'load-conf-files '("modeline"
-                          "keys"
-                          "general-settings"))
+(mapc #'load-conf-files '("general-settings"
+                          "modeline"
+                          "keys"))
 
 ;;; init.lisp ends here

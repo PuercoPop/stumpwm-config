@@ -9,6 +9,12 @@
 (define-key *top-map* (kbd "s-Up") "gnext")
 (define-key *top-map* (kbd "s-Down") "gprev")
 
+;; extra keybinding for exiting splitscreen
+(define-key *root-map* (kbd "q") "only")
+
+;; bind w to windowlist which is more usefull than windows
+(define-key *root-map* (kbd "w") "windowlist")
+
 ;; toggle gaps keybinding
 (define-key *top-map* (kbd "s-g") "toggle-gaps")
 

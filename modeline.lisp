@@ -1,7 +1,7 @@
 ;;; modeline.lisp
 
 ;; modeline settings
-(setf *mode-line-timeout* 10) 
+(setf *mode-line-timeout* 1) 
 (setf *mode-line-border-width* 0) 
 (setf *mode-line-background-color* "#333333")
 (setf *mode-line-foreground-color* "#ebdbb2")
