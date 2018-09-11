@@ -29,9 +29,9 @@
 (mapc #'load-module '("ttf-fonts"
                       "swm-gaps"))
 
-(defun load-conf-files (file-names)
+(defun load-conf-files (conf-filenames)
   "Function to load a list of lisp files"
-  (load (merge-pathnames (concat file-names ".lisp") *load-truename*)))
+  (load (merge-pathnames (concat conf-filenames ".lisp") *load-truename*)))
 
 
 ;; load the rest of the config files
