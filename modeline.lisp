@@ -6,6 +6,8 @@
 (setf *mode-line-background-color* "#333333")
 (setf *mode-line-foreground-color* "#ebdbb2")
 
+
+
 ;; setup modeline
 (setf *screen-mode-line-format*
       (list "[^B%n^b] %W^>"

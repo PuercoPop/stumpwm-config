@@ -23,4 +23,7 @@
 ;; toggle gaps keybinding (Super + G)
 (define-key *top-map* (kbd "s-g") "toggle-gaps")
 
+;; prefix + return launches urxvt terminal
+(define-key *root-map* (kbd "Return") "exec urxvt")
+
 ;;; keys.lisp ends here
