@@ -1,8 +1,12 @@
 # StumpWM-Config
-This repo contains my [Stump Window Manager][stumpwm-website] configuration files.  
+This repo contains my [Stump Window Manager][stumpwm-website] 
+configuration files.  
 I run Stump Window Manager on [Ubuntu][ubuntu-website] 18.04.
 
 ## Prerequisites
+For installing StumpWM see instructions in the Readme page of the 
+[Stumpwm github repo][stump-github-page].
+
 I use the font `DejaVu Sans Mono` and also `FontAwesome` for icons in StumpWM.  
 You can get them on Ubuntu by entering this in a terminal:
 
@@ -24,7 +28,9 @@ git clone https://github.com/stumpwm/stumpwm-contrib ~/.stumpwm.d/modules
 ```
 
 ## License
-GPL v3+
+[GPL v3+][gpl_license]
 
 [stumpwm-website]: https://stumpwm.github.io/index.html
 [ubuntu-website]: https://www.ubuntu.com/desktop
+[stump-github-page]: https://github.com/stumpwm/stumpwm
+[gpl_license]: https://github.com/jamesmccabe/stumpwm-config/blob/master/LICENSE
