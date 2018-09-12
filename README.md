@@ -17,7 +17,8 @@ sudo apt install fonts-font-awesome
 Then refresh the font cache in Lisp REPL prompt:
 ```shell
 sbcl --load quicklisp.lisp
-* (xft:cache-fonts)
+(ql:quickload "clx-truetype")
+(xft:cache-fonts)
 ```
 
 ## Setup
