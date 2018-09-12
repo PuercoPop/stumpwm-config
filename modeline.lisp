@@ -7,11 +7,12 @@
 (setf *mode-line-foreground-color* "#ebdbb2")
 
 
+(setf *time-modeline-string* "%a, %e %b ^B^6^f1^f0^n %H:%M")
 
 ;; setup modeline
 (setf *screen-mode-line-format*
       (list "[^B%n^b] %W^>"
-            "^B^2//^n "
+            "^B^3^f1^f0^n "
             "%d"))
 
 ;; turn on the mode line

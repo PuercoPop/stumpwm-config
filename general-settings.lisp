@@ -1,7 +1,8 @@
 ;;; general-settings.lisp
 
 ;; setup fonts
-(set-font (make-instance 'xft:font :family "FreeSans" :subfamily "Regular" :size 10))
+(set-font (list (make-instance 'xft:font :family "DejaVu Sans" :subfamily "Bold" :size 9)
+                (make-instance 'xft:font :family "FontAwesome" :subfamily "Regular" :size 10)))
 
 ;; setup groups
 (grename "Base")
