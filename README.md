@@ -1,5 +1,5 @@
 # StumpWM-Config
-This repo contains my [Stump Window Manager][stumpwm-webiste] configuration files.  
+This repo contains my [Stump Window Manager][stumpwm-website] configuration files.  
 I run Stump Window Manager on [Ubuntu][ubuntu-website] 18.04.
 
 ## Prerequisites
@@ -9,6 +9,11 @@ You can get them on Ubuntu by entering this in a terminal:
 ```shell
 sudo apt install ttf-dejavu
 sudo apt install fonts-font-awesome
+```
+Then refresh the font cache in Lisp REPL prompt:
+```shell
+sbcl --load quicklisp.lisp
+* (xft:cache-fonts)
 ```
 
 ## Setup
