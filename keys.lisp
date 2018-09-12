@@ -9,13 +9,18 @@
 (define-key *top-map* (kbd "s-Up") "gnext")
 (define-key *top-map* (kbd "s-Down") "gprev")
 
+;; cycle through unsplit windows using Super key
+(define-key *top-map* (kbd "s-Right") "pull-hidden-next")
+(define-key *top-map* (kbd "s-Left") "pull-hidden-previous")
+
 ;; extra keybinding for exiting splitscreen
 (define-key *root-map* (kbd "q") "only")
 
 ;; bind w to windowlist which is more usefull than windows
+;; as it can be used as menu
 (define-key *root-map* (kbd "w") "windowlist")
 
-;; toggle gaps keybinding
+;; toggle gaps keybinding (Super + G)
 (define-key *top-map* (kbd "s-g") "toggle-gaps")
 
 ;;; keys.lisp ends here
