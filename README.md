@@ -1,12 +1,12 @@
-## stumpwm-config
-My Stump Window Manager configuration files.
+# StumpWM-Config
+This repo contains my Stump Window Manager configuration files.
 
-### Setup
+## Setup
 
 ```shell
 git clone https://github.com/jamesmccabe/stumpwm-config ~/.stumpwm.d
 git clone https://github.com/stumpwm/stumpwm-contrib ~/.stumpwm.d/modules
 ```
 
-### License
+## License
 GPL v3+
