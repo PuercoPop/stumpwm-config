@@ -36,6 +36,7 @@
 
 ;; load the rest of the config files
 (mapc #'load-conf-files '("general-settings"
+                          "colors"
                           "modeline"
                           "keys"))
 
