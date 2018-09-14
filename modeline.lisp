@@ -5,14 +5,15 @@
 (setf *mode-line-border-width* 0) 
 (setf *mode-line-background-color* *mode-line-bg-color*)
 (setf *mode-line-foreground-color* *mode-line-fg-color*)
+(setf *mode-line-pad-y* -1)
+(setf *mode-line-pad-y* -1)
 
-
-(setf *time-modeline-string* "%a, %e %b ^B^1^f1^f0^n %H:%M")
+(setf *time-modeline-string* "%a, %e %b ^1^f2^f1^n %H:%M")
 
 ;; setup modeline
 (setf *screen-mode-line-format*
-      (list "[^B%n^b] %W^>"
-            "^B^5^f1^f0^n "
+      (list "^f1^5[%n]^n %W^>"
+            "^5^f2^f1^n "
             "%d"))
 
 ;; turn on the mode line
