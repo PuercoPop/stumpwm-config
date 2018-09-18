@@ -3,12 +3,12 @@
 (defparameter *mode-line-bg-color* "#333333")
 (defparameter *mode-line-fg-color* "#ebdbb2")
 
-(defparameter *msg-fg-color* "#ebdbb2")
 (defparameter *msg-bg-color* "#1d2021")
+(defparameter *msg-fg-color* "#ebdbb2")
 (defparameter *msg-border-color* "#cc241d")
-;
+
 (setf *colors*
-      '("#ffffff"        ; ^0
+      '("#ffffff"       ; ^0
        "#cc241d"        ; ^1
        "Yellow4"        ; ^2
        "PaleVioletRed4" ; ^3
