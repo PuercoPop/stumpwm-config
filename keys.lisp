@@ -20,6 +20,10 @@
 ;; as it can be used as menu
 (define-key *root-map* (kbd "w") "windowlist")
 
+;; bind G to grouplist which is more usefull than groups
+;; as it can be used as menu
+(define-key *root-map* (kbd "G") "grouplist")
+
 ;; bind vgrouplist (Spuer + g)
 (define-key *top-map* (kbd "s-g") "vgrouplist")
 

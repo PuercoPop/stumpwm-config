@@ -70,6 +70,7 @@
                        (if (= win-count 1) "window" "windows"))))))
 
 ;; http://lists.nongnu.org/archive/html/stumpwm-devel/2016-07/msg00002.html
+;; similar to vgroups but can be used as menu like windowlist
 (defcommand vgrouplist () (:rest)
   (let* ((groups (sort-groups (current-screen)))
          (selection (second (select-from-menu
@@ -89,6 +90,6 @@
           (group (switch-to-group selection))
           (window (progn (switch-to-group (window-group selection))
                          (group-focus-window (current-group) selection))))
-      (throw 'error :abort))))
+      (throw 'stumpwm::error "Aborted"))))
         
 ;;; defs.lisp ends here
