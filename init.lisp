@@ -17,7 +17,7 @@
 
 ;;; Commentary:
 
-;; This file is my personal StumpWM configuration.
+;; These files are my personal StumpWM configuration.
 ;; It works with StumpWM 18.05, sbcl 1.4.5.debian on Ubuntu 18.04 LTS.
 ;; See manual at: https://stumpwm.github.io/git/stumpwm-git.pdf
 
@@ -38,6 +38,8 @@
 (mapc #'load-conf-files '("colors"
                           "general-settings"
                           "modeline"
+                          "defs"
+                          "app-menu"
                           "keys"))
 
 ;;; init.lisp ends here

@@ -1,9 +1,10 @@
 ;;; general-settings.lips
 
 ;; setup fonts
-(set-font (list (make-instance 'xft:font :family "DejaVu Sans Mono" :subfamily "Bold" :size 10)
-                (make-instance 'xft:font :family "DejaVu Sans" :subfamily "Bold" :size 9)
-                (make-instance 'xft:font :family "FontAwesome" :subfamily "Regular" :size 10)))
+(set-font (list
+           (make-instance 'xft:font :family "DejaVu Sans Mono" :subfamily "Bold" :size 11)
+           (make-instance 'xft:font :family "DejaVu Sans" :subfamily "Bold" :size 9)
+           (make-instance 'xft:font :family "FontAwesome" :subfamily "Regular" :size 10)))
 
 ;; setup groups
 (grename "Base")

@@ -24,10 +24,30 @@
 ;; as it can be used as menu
 (define-key *root-map* (kbd "g") "grouplist")
 
-;; toggle gaps keybinding (Super + G)
+;; toggle gaps keybinding (Super + g)
 (define-key *top-map* (kbd "s-g") "toggle-gaps")
+
+;; hard restart keybinding (Super + r)
+(define-key *top-map* (kbd "s-r") "restart-stump")
+
+;; Show Applications menu
+(define-key *top-map* (kbd "s-m") "app-menu")
+
+;; apps keybindings
 
 ;; prefix + return launches urxvt terminal
 (define-key *root-map* (kbd "Return") "exec urxvt")
+
+;; run or raise pcmanfm prefix + t
+(defcommand pcmanfm () ()
+  "Start Pcmanfm or switch to it, if it is already running."
+  (run-or-raise "pcmanfm" '(:class "Pcmanfm")))
+(define-key *root-map* (kbd "t") "pcmanfm")
+
+;; run or raise Firefox with prefix + f
+(defcommand firefox () ()
+  "Start Firefox or switch to it, if it is already running."
+  (run-or-raise "firefox" '(:class "Firefox")))
+(define-key *root-map* (kbd "f") "firefox")
 
 ;;; keys.lisp ends here
