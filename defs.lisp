@@ -63,7 +63,7 @@
     (dolist (group (screen-groups (current-screen)))
       (setq win-count (+ (length (group-windows group)) win-count)))
 
-    ;; Display the number of open windows or shutdown
+    ;; Display the number of open windows or reboot
     (if (= win-count 0)
         (run-commands "exec systemctl reboot")
       (message (format nil "You have ~d ~a open! Please close before rebooting." win-count
@@ -91,5 +91,8 @@
           (window (progn (switch-to-group (window-group selection))
                          (group-focus-window (current-group) selection))))
       (throw 'stumpwm::error "Aborted"))))
-        
+
+
+
+
 ;;; defs.lisp ends here
