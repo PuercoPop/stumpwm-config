@@ -9,7 +9,8 @@
 (defcommand app-menu () ()
   "Show the application menu"
   (labels ((pick (options)
-                 (let ((selection (stumpwm::select-from-menu (current-screen) options nil 0)))
+                 (let ((selection (stumpwm::select-from-menu
+                                   (current-screen) options nil 0)))
                    (cond
                     ((null selection)
                      (throw 'stumpwm::error "Aborted"))
@@ -68,4 +69,26 @@
       (message (format nil "You have ~d ~a open! Please close before rebooting." win-count
                        (if (= win-count 1) "window" "windows"))))))
 
+;; http://lists.nongnu.org/archive/html/stumpwm-devel/2016-07/msg00002.html
+(defcommand vgrouplist () (:rest)
+  (let* ((groups (sort-groups (current-screen)))
+         (selection (second (select-from-menu
+                             (current-screen)
+                             (mapcan (lambda (g)
+                                       (list* (list (format-expand
+                                                     *group-formatters* *group-format* g) g)
+                                              (mapcar (lambda (w)
+                                                        (list (format-expand
+                                                               *window-formatters*
+                                                               (concatenate 'string "  " *window-format*) w) w))
+                                                      (sort-windows g))))
+                                     groups)
+                             nil))))
+    (if selection
+        (typecase selection
+          (group (switch-to-group selection))
+          (window (progn (switch-to-group (window-group selection))
+                         (group-focus-window (current-group) selection))))
+      (throw 'error :abort))))
+        
 ;;; defs.lisp ends here

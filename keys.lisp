@@ -20,12 +20,11 @@
 ;; as it can be used as menu
 (define-key *root-map* (kbd "w") "windowlist")
 
-;; bind g to grouplist which is more usefull than groups (C-z g g)
-;; as it can be used as menu
-(define-key *root-map* (kbd "g") "grouplist")
+;; bind vgrouplist (Spuer + g)
+(define-key *top-map* (kbd "s-g") "vgrouplist")
 
-;; toggle gaps keybinding (Super + g)
-(define-key *top-map* (kbd "s-g") "toggle-gaps")
+;; toggle useless gaps keybinding (Super + u)
+(define-key *top-map* (kbd "s-u") "toggle-gaps")
 
 ;; hard restart keybinding (Super + r)
 (define-key *top-map* (kbd "s-r") "restart-stump")
