@@ -92,7 +92,4 @@
                          (group-focus-window (current-group) selection))))
       (throw 'stumpwm::error "Aborted"))))
 
-
-
-
 ;;; defs.lisp ends here

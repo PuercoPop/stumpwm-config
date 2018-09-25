@@ -13,8 +13,7 @@
 ;; setup modeline
 (setf *screen-mode-line-format*
       (list "^f1^5[%n]^n %W^>"
-            "^f2^6^f1 "
-            "^5^f2^f1^n "
+            " ^5^f2^f1^n "
             "%d"))
 
 ;; turn on the mode line

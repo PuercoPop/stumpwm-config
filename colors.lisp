@@ -4,7 +4,7 @@
 (defparameter *mode-line-fg-color* "#ebdbb2")
 
 (defparameter *msg-bg-color* "#1d2021")
-(defparameter *msg-fg-color* "#ebdbb2")
+(defparameter *msg-fg-color* "#ffffff")
 (defparameter *msg-border-color* "#cc241d")
 
 (setf *colors*

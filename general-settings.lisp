@@ -2,7 +2,7 @@
 
 ;; setup fonts
 (set-font (list
-           (make-instance 'xft:font :family "DejaVu Sans Mono" :subfamily "Bold" :size 11)
+           (make-instance 'xft:font :family "DejaVu Sans Mono" :subfamily "Bold" :size 10)
            (make-instance 'xft:font :family "DejaVu Sans" :subfamily "Bold" :size 9)
            (make-instance 'xft:font :family "FontAwesome" :subfamily "Regular" :size 10)))
 
@@ -10,6 +10,9 @@
 (grename "Base")
 (gnewbg "Extra")
 (gnewbg-float "Float")
+
+;; set mouse pointer to left cursor
+(run-shell-command "xsetroot -cursor_name left_ptr")
 
 ;; windows settings
 (setf *ignore-wm-inc-hints* t)
@@ -40,7 +43,7 @@
 ;; (touching the screen border)
 (setf swm-gaps:*outer-gaps-size* 20)
 
-;; Startup message
+;; startup message
 (setf *startup-message* "^5    Stump Window Manager ^0has initialized!
 Press ^1Ctrl+z ? ^0for Help. ^5Never Stop Hacking!")
 

@@ -37,6 +37,7 @@
 ;; load the rest of the config files
 (mapc #'load-conf-files '("colors"
                           "general-settings"
+                          "vol"
                           "modeline"
                           "defs"
                           "app-menu"

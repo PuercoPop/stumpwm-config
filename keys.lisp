@@ -24,7 +24,7 @@
 ;; as it can be used as menu
 (define-key *root-map* (kbd "G") "grouplist")
 
-;; bind vgrouplist (Spuer + g)
+;; bind vgrouplist (Super + g)
 (define-key *top-map* (kbd "s-g") "vgrouplist")
 
 ;; toggle useless gaps keybinding (Super + u)
@@ -33,8 +33,13 @@
 ;; hard restart keybinding (Super + r)
 (define-key *top-map* (kbd "s-r") "restart-stump")
 
-;; Show Applications menu
+;; show Applications menu
 (define-key *top-map* (kbd "s-m") "app-menu")
+
+;; multimedia keys
+(define-key *top-map* (kbd "XF86AudioRaiseVolume") "volume-increase")
+(define-key *top-map* (kbd "XF86AudioLowerVolume") "volume-decrease")
+(define-key *top-map* (kbd "XF86Bluetooth") "toggle-mute")
 
 ;; apps keybindings
 
