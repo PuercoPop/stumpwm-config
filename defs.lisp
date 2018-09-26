@@ -82,9 +82,7 @@
                                                         (list (format-expand
                                                                *window-formatters*
                                                                (concatenate 'string "  " *window-format*) w) w))
-                                                      (sort-windows g))))
-                                     groups)
-                             nil))))
+                                                      (sort-windows g)))) groups) nil))))
     (if selection
         (typecase selection
           (group (switch-to-group selection))
