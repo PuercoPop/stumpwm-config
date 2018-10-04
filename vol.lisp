@@ -4,8 +4,8 @@
 
 (defcommand volume-increase () ()
   "Increase volume but not over 100%"
-  (setf *volume* (run-shell-command "pactl list sinks | grep -i volume | head -n1 | awk '{print $5}' | tr -d '\\r\\n'" t))
-  (if (>= (parse-integer *volume* :junk-allowed t) *max-vol*)
+  (setf *volume-check* (run-shell-command "pactl list sinks | grep -i volume | head -n1 | awk '{print $5}' | tr -d '\\r\\n'" t))
+  (if (>= (parse-integer *volume-check* :junk-allowed t) *max-vol*)
       (message "Volume is at Maximum 100%!")
     (run-shell-command "pactl set-sink-volume 0 +5%")))
 

@@ -41,6 +41,9 @@
 (define-key *top-map* (kbd "XF86AudioLowerVolume") "volume-decrease")
 (define-key *top-map* (kbd "XF86Bluetooth") "toggle-mute")
 
+;; Take a screenshot using PrtSc
+(define-key *top-map* (kbd "Print") "exec scrot")
+
 ;; apps keybindings
 
 ;; prefix + return launches urxvt terminal

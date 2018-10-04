@@ -53,6 +53,7 @@
 
 ;; startup message
 (setf *startup-message* "^5    Stump Window Manager ^0has initialized!
-Press ^1Ctrl+z ? ^0for Help. ^5Never Stop Hacking!")
+Press ^1Ctrl+z ? ^0for Help. ^5Never Stop Hacking!
+         ^0Powered with ^15 Common Lisp ")
 
 ;;; general-settings.lisp ends here
